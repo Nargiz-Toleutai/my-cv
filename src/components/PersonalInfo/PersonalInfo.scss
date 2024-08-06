@@ -1,0 +1,41 @@
+@use '../../styles/typography.scss';
+
+$breakpoint-large: 1024px;
+$breakpoint-small: 768px;
+$photo-size: 462px;
+
+.about-me {
+  display: flex;
+  justify-content: flex-start;
+  width: 80%;
+  max-width: 100%;
+  overflow: auto;
+  gap: 20px;
+  padding-top: 40px;
+
+  @media (max-width: $breakpoint-large) {
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0;
+    padding-top: 80px;
+  }
+
+  &__my-photo {
+    width: $photo-size;
+    height: $photo-size;
+    flex-shrink: 0;
+    border-radius: 12px;
+    object-fit: contain;
+
+    @media (max-width: $breakpoint-small) {
+      width: 100%;
+      max-width: $photo-size;
+      height: auto;
+    }
+  }
+}
+
+// // .about-me:hover .about-me__my-photo {
+// //     transform: scale(1.2); /* Масштабирование изображения при наведении курсора */
+// //   }
+// // transition: transform 0.5s ease;

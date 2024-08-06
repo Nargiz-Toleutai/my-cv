@@ -1,0 +1,55 @@
+@use "../../../styles/typography.scss";
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-grow: 1;
+
+  h1 {
+    @include typography.header1;
+  }
+
+  p {
+    @include typography.body;
+  }
+
+  &__availability-indicator {
+    background-color: rgb(53, 243, 126);
+    border-radius: 100%;
+    box-sizing: border-box;
+    height: 8px;
+    width: 8px;
+  }
+
+  &__role {
+    @include typography.subtitle;
+    margin: 10px 0 10px 0;
+  }
+
+  &__availability-block {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__availability-text {
+    @include typography.secondary;
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 24px 0 24px 0;
+    gap: 18px;
+  }
+
+  @media (max-width: 1024px) {
+    justify-content: center;
+    align-items: center;
+  }
+}
